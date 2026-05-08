@@ -1,0 +1,340 @@
+/* src/components/ProgramTab/ProgramTab.css */
+
+/* ─── DayHeader ──────────────────────────────────────────────────── */
+.day-header-root {
+  margin-bottom: 24px;
+}
+
+.day-header-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.day-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: 5px;
+  border: 1px solid;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.day-header-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 640px) {
+  .day-header-title {
+    font-size: 4rem;
+  }
+}
+
+.day-header-focus {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #CBD5E1;
+  margin-bottom: 20px;
+}
+
+.day-header-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.day-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 14px 24px;
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
+.day-stat-value {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--day-color, #F1F5F9);
+}
+
+.day-stat-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+/* ─── TrainerNote ────────────────────────────────────────────────── */
+.trainer-note-root {
+  border-left-width: 3px;
+  border-left-style: solid;
+  padding: 18px 20px 18px 20px;
+  margin-bottom: 16px;
+}
+
+.trainer-note-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.trainer-note-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #CBD5E1;
+}
+
+/* ─── InfoGrid ───────────────────────────────────────────────────── */
+.info-grid-root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+  .info-grid-root {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-card {
+  padding: 16px 18px;
+}
+
+.info-card-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-bottom: 8px;
+}
+
+.info-card-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #CBD5E1;
+}
+
+/* ─── ExerciseTable ──────────────────────────────────────────────── */
+.exercise-table-root {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exercise-col-header {
+  display: grid;
+  grid-template-columns: 32px 1fr 60px 110px 80px 72px auto;
+  gap: 0 16px;
+  padding: 0 16px 8px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .exercise-col-header {
+    grid-template-columns: 24px 1fr 45px 80px;
+  }
+  .exercise-col-header .col-rest,
+  .exercise-col-header .col-tempo,
+  .exercise-col-header > :last-child {
+    display: none;
+  }
+}
+
+.col-header-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.col-header-label.text-right {
+  text-align: right;
+}
+
+/* ─── ExerciseRow ────────────────────────────────────────────────── */
+.exercise-row-root {
+  padding: 14px 16px;
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.2s ease;
+  cursor: default;
+}
+
+.exercise-row-root:hover {
+  border-left-color: var(--day-color);
+}
+
+.exercise-row-grid {
+  display: grid;
+  grid-template-columns: 32px 1fr 60px 110px 80px 72px auto;
+  gap: 0 16px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .exercise-row-grid {
+    grid-template-columns: 24px 1fr 45px 80px;
+  }
+  .exercise-row-grid .cell-rest,
+  .exercise-row-grid .cell-tempo,
+  .exercise-row-grid .exercise-row-muscles {
+    display: none;
+  }
+}
+
+.exercise-row-index {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  color: #1E293B;
+}
+
+.exercise-row-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #F1F5F9;
+  line-height: 1.2;
+}
+
+.exercise-row-rpe {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+
+.exercise-row-setsreps {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+}
+
+.exercise-row-rest,
+.exercise-row-tempo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #94A3B8;
+  line-height: 1;
+  text-align: center;
+}
+
+.exercise-row-muscles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.muscle-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #94A3B8;
+  white-space: nowrap;
+}
+
+.cue-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-left: 40px;
+}
+
+@media (max-width: 640px) {
+  .cue-section {
+    padding-left: 0;
+  }
+}
+
+.cue-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-bottom: 4px;
+}
+
+.cue-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.75;
+  color: #CBD5E1;
+}
+
+/* ─── Tempo Key ──────────────────────────────────────────────────── */
+.tempo-key-root {
+  padding: 14px 18px;
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+}
+
+.tempo-key-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-right: 8px;
+}
+
+.tempo-key-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tempo-key-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: #94A3B8;
+}
+
+.tempo-key-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #64748B;
+}

@@ -1,0 +1,100 @@
+// src/data/days.ts
+import type { Day } from '../types';
+
+const DAYS: Day[] = [
+  {
+    id: 0, label: "Push A", dayNum: 1, tag: "STRENGTH", color: "#FF6B35",
+    focus: "Chest · Triceps",
+    trainerNote: "Your heaviest pressing day. Every set on bench gets logged — weight, reps, how it felt. If you hit the top of the rep range, you add weight next session. No exceptions. Creatine is loaded, food is in. Go heavy, go honest.",
+    warmup: "2 sets empty bar bench · Shoulder CAR circles · Band pull-aparts ×20",
+    nutrition: "Pre: Rice + protein 90 min before. Post: Shake + banana immediately, full meal within 60 min.",
+    exercises: [
+      { name: "Barbell Bench Press", sets: 4, reps: "4–6", rest: "3–4 min", tempo: "3-0-1-0", rpe: 9, muscles: ["Chest", "Triceps"], cue: "Retract your scapula BEFORE you unrack. Bar touches nipple line. Drive your feet into the floor — don't just push the bar. Every rep is a full-body event." },
+      { name: "Incline Barbell Press", sets: 4, reps: "6–8", rest: "2–3 min", tempo: "3-0-1-0", rpe: 8, muscles: ["Upper Chest"], cue: "45° max — any higher and it becomes a shoulder press. Control the descent, do NOT bounce off the chest. Upper chest is what gives you that shelf. Build it." },
+      { name: "Weighted Dips", sets: 3, reps: "8–10", rest: "2 min", tempo: "2-0-1-0", rpe: 8, muscles: ["Lower Chest", "Triceps"], cue: "Lean forward 15–20° for chest. Elbows slightly flared. Full ROM — shoulders go below elbows at the bottom. Add weight when 10 reps feels manageable." },
+      { name: "Cable Fly (Low to High)", sets: 3, reps: "12–15", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Chest"], cue: "Feel the stretch at the start, squeeze for a full second at the top. This is NOT a strength movement. Light weight, maximum intent." },
+      { name: "Close-Grip Bench Press", sets: 3, reps: "8–10", rest: "2 min", tempo: "3-0-1-0", rpe: 8, muscles: ["Triceps", "Chest"], cue: "Grip just inside shoulder width. Elbows at 45° — not flared out. This builds tricep mass better than any pushdown will. Don't rush it." },
+      { name: "Overhead Tricep Extension", sets: 3, reps: "12–15", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Triceps Long Head"], cue: "Full overhead stretch — long head only fires when the arm is above the head. Slow down, explosive up. Most people do these too fast and lose the entire point." },
+    ],
+  },
+  {
+    id: 1, label: "Pull A", dayNum: 2, tag: "STRENGTH", color: "#22C55E",
+    focus: "Back · Traps · Biceps · Rear Delts",
+    trainerNote: "Traps are part of your back — they always have been. Shrugs go HERE on Pull A, heavy. I've seen people with wide backs and flat invisible traps and it looks unfinished. Build the whole structure. Pull-ups are your primary strength lift today — add weight when you can.",
+    warmup: "Dead hangs ×30s × 2 · Band pull-aparts ×20 · Face pulls light ×15",
+    nutrition: "Pre: Complex carbs + protein 90 min out. Creatine with pre-meal. Post: Full meal within 60 min — dal, paneer, eggs, chicken. High protein.",
+    exercises: [
+      { name: "Weighted Pull-Ups", sets: 4, reps: "4–6", rest: "3–4 min", tempo: "3-1-1-0", rpe: 9, muscles: ["Lats", "Biceps"], cue: "Dead hang every rep. Chin OVER the bar at the top. Add weight when you hit 6 clean reps. This is your back's bench press — it deserves the same respect." },
+      { name: "Barbell Pendlay Row", sets: 4, reps: "5–7", rest: "3 min", tempo: "X-0-1-0", rpe: 9, muscles: ["Mid Back", "Lats"], cue: "Bar starts dead on the floor every rep. Explosive pull to lower sternum, controlled return to the floor. No momentum, no half-reps. This builds the back thickness that makes a physique." },
+      { name: "Barbell Shrug", sets: 4, reps: "8–12", rest: "2 min", tempo: "1-2-1-0", rpe: 8, muscles: ["Traps (Upper)", "Traps (Mid)"], cue: "Heavy. Hold 2 full seconds at the top — the squeeze IS the rep. Do NOT roll your shoulders. Straight up, straight hold, straight down. Traps respond to weight and time under tension." },
+      { name: "Seated Cable Row (Wide Grip)", sets: 3, reps: "10–12", rest: "2 min", tempo: "2-1-2-0", rpe: 8, muscles: ["Mid Back", "Traps"], cue: "Pull to your sternum, hold 1 second. 2-second return. The stretch at the front is where the growth happens — don't cut it short." },
+      { name: "Face Pulls", sets: 4, reps: "15–20", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Rear Delts", "Rotator Cuff"], cue: "Non-negotiable every Pull session. Rope at eye level, pull to forehead with external rotation. This keeps your shoulders functional for the next decade. Do not skip this." },
+      { name: "Incline DB Curl", sets: 3, reps: "10–12", rest: "90s", tempo: "3-1-1-0", rpe: 7, muscles: ["Biceps"], cue: "45° incline = maximum pre-stretch on the long head. No swinging. This builds the bicep peak. Slow down on the way down — that's where the damage that creates growth happens." },
+      { name: "Hammer Curl", sets: 3, reps: "12–15", rest: "90s", tempo: "2-0-1-0", rpe: 7, muscles: ["Brachialis", "Forearms"], cue: "Brachialis sits under the bicep and pushes it upward when developed. Most people skip this. Most people have flat arms. You now know why." },
+    ],
+  },
+  {
+    id: 2, label: "Legs A", dayNum: 3, tag: "QUAD + SHOULDERS", color: "#EAB308",
+    focus: "Quads · Glutes · Shoulders · Calves",
+    trainerNote: "Squats first, always. Your shoulders go AFTER the legs are done — completely fresh. Hit your OHP like it's a primary lift, because in this program it IS. Six movements, all intentional. No fluff.",
+    warmup: "Goblet squat ×10 light · Hip circles · Ankle mobility · Leg swings ×10 each",
+    nutrition: "Biggest pre-workout meal of the week. Two-group day. Eat 2 hours before — rice, sabzi, protein. Post: prioritize carbs to replenish glycogen.",
+    exercises: [
+      { name: "Barbell Back Squat", sets: 4, reps: "5–7", rest: "3–4 min", tempo: "3-1-1-0", rpe: 8, muscles: ["Quads", "Glutes", "Core"], cue: "Depth below parallel — no excuses. Knees track toes. Chest up, brace like you're about to take a punch. The 1-second pause at the bottom eliminates momentum and builds real strength." },
+      { name: "Bulgarian Split Squat", sets: 3, reps: "10–12 / leg", rest: "2 min", tempo: "3-0-1-0", rpe: 8, muscles: ["Quads", "Glutes", "Hip Flexors"], cue: "Rear foot elevated, front foot far forward so your shin stays vertical at the bottom. This will humble you — that's the point. Do the weaker leg first, always." },
+      { name: "Leg Extension", sets: 4, reps: "12–15", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Quads VMO"], cue: "Full extension, 1-second squeeze at the top. Slow eccentric. Builds that teardrop VMO sweep above the knee. Don't rush through these." },
+      { name: "Seated Calf Raise", sets: 4, reps: "12–15", rest: "60s", tempo: "2-2-1-0", rpe: 7, muscles: ["Soleus"], cue: "2-second pause at the bottom stretch. Full ROM only. Calves are stubborn because most people do half reps. Full stretch, full contraction, every rep." },
+      { name: "Seated DB Overhead Press", sets: 4, reps: "8–10", rest: "2–3 min", tempo: "2-0-1-0", rpe: 8, muscles: ["All Delt Heads", "Triceps"], cue: "Completely fresh shoulders — this is your best OHP opportunity all week. Sit upright, no lower back arch. Full overhead lockout. Go heavy and go with intention." },
+      { name: "Cable Lateral Raise", sets: 4, reps: "12–15", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Medial Delt"], cue: "Lead with your elbow, not your wrist. Pinky slightly higher than thumb. Hold at the top. Medial delt width is what changes your shoulder-to-waist ratio." },
+    ],
+  },
+  {
+    id: 3, label: "Push B", dayNum: 4, tag: "VOLUME", color: "#F472B6",
+    focus: "Chest · Triceps",
+    trainerNote: "Push A was heavy. Push B is controlled, pump-focused, attacks the chest from every angle. The cable crossover hits lower chest adduction — something flat pressing never fully achieves. Feel the muscle. Don't just move the weight.",
+    warmup: "Band pull-aparts ×20 · Arm crossovers ×15 · Light DB press 2 warmup sets",
+    nutrition: "Moderate pre-workout — lighter and faster-digesting works on volume days. Post: Full meal, protein-forward.",
+    exercises: [
+      { name: "Incline DB Press", sets: 4, reps: "10–12", rest: "2 min", tempo: "3-1-1-0", rpe: 8, muscles: ["Upper Chest"], cue: "Greater ROM than barbell. Elbows at 45° at the bottom — not flared 90°. Pause 1 second at the bottom. Upper chest volume creates that 3D look." },
+      { name: "Flat Barbell Press (Paused)", sets: 3, reps: "10–12", rest: "2 min", tempo: "3-2-1-0", rpe: 8, muscles: ["Chest", "Triceps"], cue: "1–2 second dead stop on the chest. No bounce. This makes every rep honest — the stretch reflex is eliminated. Lighter than Push A by design." },
+      { name: "Cable Crossover (High to Low)", sets: 3, reps: "12–15", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Lower Chest"], cue: "Cables set high. Cross your hands at the bottom for full adduction. One of the only movements that trains lower chest function. Squeeze hard, slow return." },
+      { name: "Machine Chest Press", sets: 3, reps: "12–15", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Chest"], cue: "Constant tension after heavy pressing. Pause at full extension, don't let the stack touch. Chase the pump — this is finishing work." },
+      { name: "Skull Crushers", sets: 3, reps: "10–12", rest: "90s", tempo: "3-0-1-0", rpe: 8, muscles: ["Triceps Long Head"], cue: "EZ-bar to the forehead. Slow 3-second eccentric. Do not ego load this — a torn tricep ends your program for months." },
+      { name: "Tricep Rope Pushdown", sets: 4, reps: "15–20", rest: "60s", tempo: "2-1-1-0", rpe: 7, muscles: ["Triceps Lateral Head"], cue: "Spread the rope at the bottom, elbows locked at your sides. Triceps should be completely pumped by set 3. That's the goal." },
+    ],
+  },
+  {
+    id: 4, label: "Pull B", dayNum: 5, tag: "VOLUME", color: "#06B6D4",
+    focus: "Back · Traps · Biceps · Rear Delts",
+    trainerNote: "Traps again — DB Shrugs today for a slightly different stimulus. Lats and mid-back are getting 16–20 sets this week combined across both Pull days. That's the range that produces real back development. Control your ego on the preacher.",
+    warmup: "Band pull-aparts ×20 · Scapular retractions ×15 · Light row 1 warmup set",
+    nutrition: "Standard protocol. Dal makhani + paneer + roti post-session — high protein, complex carbs.",
+    exercises: [
+      { name: "Chest-Supported DB Row", sets: 4, reps: "10–12", rest: "2 min", tempo: "2-1-2-0", rpe: 8, muscles: ["Mid Back", "Lats", "Rear Delts"], cue: "Zero momentum — chest support makes cheating impossible. 2-second hold at the top, 2-second controlled descent. Go heavier than you think you can." },
+      { name: "Lat Pulldown (Close Neutral Grip)", sets: 3, reps: "10–12", rest: "2 min", tempo: "3-1-1-0", rpe: 8, muscles: ["Lats", "Lower Lats"], cue: "Neutral close grip hits the lower lat — the part that builds the V-taper. Full stretch at the top. Pull to upper chest, hold 1 second. Lean back 5–10° max." },
+      { name: "DB Shrug", sets: 4, reps: "10–12", rest: "90s", tempo: "1-2-1-0", rpe: 8, muscles: ["Traps Upper", "Traps Mid"], cue: "Heavier than you think. 2-second hold at the top. No rolling — straight up, hold, straight down. Your traps get hit twice a week now. Watch them grow." },
+      { name: "Straight-Arm Pulldown", sets: 3, reps: "12–15", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Lats"], cue: "Arms straight, slight forward lean, pull the rope to your hips. Biceps completely uninvolved. Isolates the lat in a way rows never can. Extremely underused — learn to love it." },
+      { name: "Face Pulls", sets: 3, reps: "15–20", rest: "90s", tempo: "2-1-1-0", rpe: 7, muscles: ["Rear Delts", "Rotator Cuff"], cue: "Every Pull session. No exceptions. External rotation at the end of every rep. This is shoulder insurance — pay the premium." },
+      { name: "EZ-Bar Preacher Curl", sets: 3, reps: "10–12", rest: "90s", tempo: "3-1-1-0", rpe: 8, muscles: ["Biceps"], cue: "Stop 10° before full extension at the bottom. Full contraction at top, slow controlled descent. No kipping, no rocking." },
+      { name: "Cable Curl", sets: 3, reps: "12–15", rest: "60s", tempo: "2-1-2-0", rpe: 7, muscles: ["Biceps"], cue: "Supinate hard at the top — rotate your pinky toward the ceiling. Constant tension that dumbbells can't replicate. 2-second eccentric every rep." },
+    ],
+  },
+  {
+    id: 5, label: "Legs B", dayNum: 6, tag: "POSTERIOR + SHOULDERS", color: "#FB923C",
+    focus: "Hamstrings · Glutes · Shoulders · Calves",
+    trainerNote: "RDLs are your hamstring bench press. Hip thrusts are not optional — glutes are the largest muscle in the body. Shoulders finish the week fully fresh. End strong.",
+    warmup: "Hip flexor stretch ×30s each · Glute bridges ×15 · Leg curl machine light ×15",
+    nutrition: "Final training day of the week. Post-workout is your most critical meal — high protein, high carb. Sleep 8+ hours. This is where the week's work becomes muscle.",
+    exercises: [
+      { name: "Romanian Deadlift", sets: 4, reps: "8–10", rest: "3 min", tempo: "3-1-1-0", rpe: 8, muscles: ["Hamstrings", "Glutes", "Lower Back"], cue: "Push hips BACK — not knees forward. Bar stays dragging against your legs the whole way down. This movement done right for a year will completely transform your posterior chain." },
+      { name: "Lying Leg Curl", sets: 4, reps: "10–12", rest: "2 min", tempo: "2-1-3-0", rpe: 8, muscles: ["Hamstrings"], cue: "3-second eccentric on every rep. The eccentric phase is where hypertrophy is maximized. Every rep should take 6 seconds total." },
+      { name: "Hip Thrust", sets: 4, reps: "12–15", rest: "2 min", tempo: "1-2-1-0", rpe: 8, muscles: ["Glutes"], cue: "2-second hold at the top. Chin tucked, ribs down, back flat. Drive through your heels. Glutes are only fully contracted at full hip extension — hold it." },
+      { name: "Leg Press", sets: 3, reps: "10–15", rest: "2 min", tempo: "3-0-1-0", rpe: 7, muscles: ["Quads", "Glutes"], cue: "High and wide foot placement. Full ROM — knees to chest, not a quarter rep. Don't lock out at the top to keep tension constant." },
+      { name: "Standing Calf Raise", sets: 4, reps: "15–20", rest: "60s", tempo: "2-2-1-0", rpe: 7, muscles: ["Gastrocnemius"], cue: "Full ROM — complete dorsiflexion at the bottom, 2-second pause. Half reps are why most people have underdeveloped calves." },
+      { name: "Arnold Press", sets: 4, reps: "10–12", rest: "2 min", tempo: "2-0-1-0", rpe: 8, muscles: ["All Delt Heads"], cue: "Start with palms facing you, rotate as you press — slowly. Hits anterior, medial AND posterior delt in one movement. The rotation is the whole value — don't shortcut it." },
+      { name: "Bent-Over Rear Delt Raise", sets: 4, reps: "15–20", rest: "60s", tempo: "2-1-1-0", rpe: 7, muscles: ["Rear Delt"], cue: "Torso parallel to the floor, slight bend in elbows. Arms arc OUTWARD not upward. Light weight, full squeeze at the top. Rear delts respond to mind-muscle connection more than load." },
+    ],
+  },
+];
+
+export default DAYS;

@@ -1,0 +1,74 @@
+/* src/components/NavTabs/NavTabs.css */
+.nav-tabs-root {
+  background: rgba(6, 8, 16, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 88px;
+  z-index: 40;
+}
+
+@media (min-width: 640px) {
+  .nav-tabs-root {
+    top: 96px;
+  }
+}
+
+.nav-tabs-inner {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  gap: 4px;
+}
+
+@media (min-width: 640px) {
+  .nav-tabs-inner {
+    padding: 0 32px;
+  }
+}
+
+.nav-tab-button {
+  position: relative;
+  padding: 12px 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  outline: none;
+}
+
+.nav-tab-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  border-radius: 2px 2px 0 0;
+  background: #FF6B35;
+  transition: width 0.25s ease;
+}
+
+.nav-tab-button.is-active {
+  color: #F1F5F9;
+}
+
+.nav-tab-button.is-active::after {
+  width: 70%;
+}
+
+.nav-tab-button:not(.is-active) {
+  color: #64748B;
+}
+
+.nav-tab-button:not(.is-active):hover {
+  color: #94A3B8;
+}
