@@ -70,10 +70,10 @@ export const LandingPage = ({ onEnter }: LandingPageProps) => {
   const text3 = "BIGGER.";
 
   return (
-    <div ref={containerRef} className="landing-page min-h-screen flex flex-col justify-center relative overflow-hidden">
+    <div ref={containerRef} className="landing-page min-h-screen flex flex-col relative overflow-hidden">
       <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-[#FF6B35] rounded-full blur-[120px] opacity-[0.08] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
       
-      <div className="landing-content relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-12 py-20 flex flex-col items-start">
+      <div className="landing-content relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-12 py-20 flex-1 flex flex-col justify-center items-start">
         
         {/* Eyebrow */}
         <div ref={eyebrowRef} className="font-condensed font-bold tracking-[0.2em] text-[#94A3B8] text-sm uppercase mb-6">
@@ -126,20 +126,29 @@ export const LandingPage = ({ onEnter }: LandingPageProps) => {
 
       </div>
 
-      {/* Ticker */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-[#060810]/50 backdrop-blur-md border-t border-white/5 py-3">
-        <div ref={tickerRef} className="flex whitespace-nowrap">
-          <div className="flex shrink-0 pr-8">
-            <span className="font-condensed font-bold uppercase tracking-[0.2em] text-[#1E293B] text-2xl">
-              PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · 
-            </span>
-          </div>
-          <div className="flex shrink-0 pr-8">
-            <span className="font-condensed font-bold uppercase tracking-[0.2em] text-[#1E293B] text-2xl">
-              PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · 
-            </span>
+      {/* Ticker & Footer Container */}
+      <div className="relative z-10 w-full mt-auto">
+        {/* Ticker */}
+        <div className="w-full overflow-hidden bg-[#060810]/50 backdrop-blur-md border-t border-white/5 py-3">
+          <div ref={tickerRef} className="flex whitespace-nowrap">
+            <div className="flex shrink-0 pr-8">
+              <span className="font-condensed font-bold uppercase tracking-[0.2em] text-[#1E293B] text-2xl">
+                PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · 
+              </span>
+            </div>
+            <div className="flex shrink-0 pr-8">
+              <span className="font-condensed font-bold uppercase tracking-[0.2em] text-[#1E293B] text-2xl">
+                PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · PUSH · PULL · LEGS · PROGRESSIVE OVERLOAD · HYPERTROPHY · STRENGTH · CONSISTENCY · 
+              </span>
+            </div>
           </div>
         </div>
+
+        {/* Footer */}
+        <footer className="w-full flex flex-col sm:flex-row items-center justify-between px-6 sm:px-12 py-4 text-[#64748B] font-body text-xs border-t border-white/5 bg-[#060810]/90">
+          <span>Developer: Sahil Khursheed</span>
+          <a href="mailto:igris4056@gmail.com" className="hover:text-[#FF6B35] transition-colors mt-2 sm:mt-0">igris4056@gmail.com</a>
+        </footer>
       </div>
     </div>
   );
